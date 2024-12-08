@@ -10,7 +10,9 @@ RUN apt update && apt install -y \
 COPY . . 
 
 
-#RUN git clone  https://github.com/CrowCpp/Crow.git  /app/lib
+
+
+RUN git submodule update --init --recursive
 
 
 WORKDIR /app/build
