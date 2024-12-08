@@ -1,0 +1,60 @@
+# Ignore build directories
+/build/
+/bin/
+/obj/
+/out/
+/Debug/
+/Release/
+
+# Ignore compiled object files and executables
+*.o
+*.a
+*.so
+*.exe
+*.out
+*.dll
+*.dylib
+
+# Ignore IDE files (for various IDEs like Visual Studio, JetBrains, etc.)
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore CMake files
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+*.cmake
+
+# Ignore Code::Blocks IDE files
+*.depend
+*.layout
+*.cbp
+
+# Ignore Qt Creator IDE files
+*.pro.user
+*.qmake.stash
+*.qmake.cache
+
+# Ignore MacOS system files
+.DS_Store
+
+# Ignore Linux system files
+*~
+*.swp
+
+# Ignore Windows system files
+Thumbs.db
+Desktop.ini
+
+# Ignore coverage files
+*.gcda
+*.gcno
+*.gcov
+
+# Ignore log files
+*.log
