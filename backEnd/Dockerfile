@@ -12,7 +12,7 @@ COPY . .
 
 
 
-RUN git submodule update --init --recursive
+#RUN git submodule update --init --recursive
 
 
 WORKDIR /app/build
