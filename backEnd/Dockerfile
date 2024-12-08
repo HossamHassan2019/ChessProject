@@ -20,7 +20,7 @@ RUN cmake .. && make
 
 
 
-FROM  alpine:latest  as runtime-stage
+FROM  ubuntu:latest  as runtime-stage
 
 WORKDIR app 
 
