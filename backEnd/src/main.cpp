@@ -53,7 +53,14 @@ int main() {
 
     // POST Route: Send a string to store
     CROW_ROUTE(app, "/set_message").methods(crow::HTTPMethod::Post)([](const crow::request& req) {
-        std::string received_message = req.body;
+        crow::json::rvalue json_body = crow::json::load(req.body);
+
+        if (!json_body) {
+            return crow::response(400, "Error: Invalid JSON");
+        }
+
+        // Extract the "key" from the request body (this is the FEN string or message)
+        std::string received_message = json_body["FEN"].s();
 
         if (received_message.empty()) {
             return crow::response(400, "Error: Empty message is not allowed.");
