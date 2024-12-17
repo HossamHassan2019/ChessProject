@@ -7,7 +7,7 @@ const postFEN = async (req,res)=>{
     // res.status(200).json({message: "FEN is received"})
     try {
         // Call the C++ API on port 5005
-        const cppResponse = await axios.post('http://localhost:8080/set_message', {
+        const cppResponse = await axios.post(process.env.URL, {
             FEN: req.body.FEN 
         });
 
