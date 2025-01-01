@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router();
 
-const{postFEN} = require("../controllers/chessController");
+const{postFEN , getFEN} = require("../controllers/chessController");
 
 
-router.route('/').post(postFEN);
+router.route('/fen').post(postFEN).get(getFEN);
 
 module.exports = router;

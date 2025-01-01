@@ -12,6 +12,7 @@
   "license": "MIT ",
   "dependencies": {
     "axios": "^1.7.9",
+    "chessground": "^9.1.1",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "nodemon": "^3.1.9"
