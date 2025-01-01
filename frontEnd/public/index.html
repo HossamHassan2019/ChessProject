@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chessground</title>
+  
+  <!-- Chessboard.js CSS -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"> -->
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="assets/chessground.base.css" />
+  <link rel="stylesheet" type="text/css" href="assets/chessground.brown.css" />
+  <link rel="stylesheet" type="text/css" href="assets/chessground.cburnett.css" />
+  <style>
+    body {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    body > div {
+      margin: 10px;
+    }
+
+    .chessground {
+      width: 500px;
+      height: 500px;
+    }
+
+    cg-board {
+      background-color: #b4c0ca;
+    }
+
+    /* Example: Adding a gradient to the squares */
+.cg-board .square-dark {
+  fill: url(#darkGradient);
+}
+
+.cg-board .square-light {
+  fill: url(#lightGradient);
+}
+
+/* Define gradients in an SVG */
+.cg-board defs {
+  display: block; /* Ensure gradients are visible */
+}
+
+  </style>
+  <!-- Include jQuery (Required for Chessboard.js) -->
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+
+  <!-- Include Chessboard.js JavaScript -->
+  <!-- <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script> -->
+</head>
+<body>
+  <!-- Chessboard container -->
+  <!-- <div id="board" style="width: 600px;"></div> -->
+  <div class="container">
+    <div id="board" class="chessground"  style="width: 500px;"> </div>
+    <label for="textInput">FEN:</label>
+    <input type="text" id="textInput" class="styled-input" placeholder=" ">
+    <button  id="ApplyButton" class="styled-button">Apply</button>
+  </div>
+  
+  <!-- Custom Script -->
+  <script src="script.js" type="module"></script>
+</body>
+</html>
