@@ -1,6 +1,7 @@
 //@desc post FEN
 //@route POST /
 //@access public 
+const {CHESS_VALIDATOR_API,PORT} = require('../config')
 const axios = require('axios')
 const postFEN = async (req,res)=>{
     // console.log("The request body is : " , req.body)
@@ -8,7 +9,7 @@ const postFEN = async (req,res)=>{
     try {
         // Call the C++ API on port 5005
 
-        const cppResponse = await axios.post(process.env.URL, {
+        const cppResponse = await axios.post(CHESS_VALIDATOR_API, {
             FEN: req.body.FEN 
         });
         let fen = cppResponse.data.PiecePositions ;

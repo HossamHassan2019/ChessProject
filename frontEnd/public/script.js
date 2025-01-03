@@ -21,6 +21,8 @@ const chessground = Chessground(board, {
       }else{
          currentFen = chessground.getFen();
       }
+      const audio = new Audio('./sound/move.wav');
+      audio.play();
     },
 
     select: function (key) {
