@@ -13,14 +13,15 @@ const chessground = Chessground(board, {
   },
   events: {
      move: (orig, dest) => {
-       console.log("from: ", orig , "to: ", dest);
+      //To be added in the future 
+      /*console.log("from: ", orig , "to: ", dest);
       if (orig == "g1" && (dest !== "f3" && dest !== "h3")) {
           chessground.set({
             fen: currentFen
           });         
       }else{
          currentFen = chessground.getFen();
-      }
+      }*/
       const audio = new Audio('./sound/move.wav');
       audio.play();
     },
