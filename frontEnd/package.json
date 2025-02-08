@@ -4,7 +4,7 @@
   "description": "NodeJS server for handling user requests ",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
@@ -12,11 +12,13 @@
   "license": "MIT ",
   "dependencies": {
     "axios": "^1.7.9",
-
     "chessground": "^9.1.1",
-
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "nodemon": "^3.1.9"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
   }
 }

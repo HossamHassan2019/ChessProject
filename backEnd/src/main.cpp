@@ -72,7 +72,7 @@ int main() {
         response["status"] = "success";
         response["sent_message"] = received_message;
         parseFen(received_message);
-        response["PiecePositions"] = received_message;;
+        response["PiecePositions"] = received_message;
         // std::cout << received_message << std::endl;
         // std::cout<<std::endl;
         
