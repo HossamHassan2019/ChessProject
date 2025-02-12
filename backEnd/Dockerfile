@@ -1,4 +1,4 @@
-FROM gcc:latest as build-stage
+FROM gcc:latest As build-stage
 
 WORKDIR /app
 
@@ -22,7 +22,7 @@ RUN cmake .. && make
 
 
 
-FROM  ubuntu:latest  as runtime-stage
+FROM  ubuntu:latest  AS runtime-stage
 
 WORKDIR app 
 
